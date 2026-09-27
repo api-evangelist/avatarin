@@ -1,23 +1,56 @@
 aid: avatarin
+
 name: Avatarin
-description: 'Avatarin is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Avatarin is listed in secondary-market harvest data but public information about its operations, offerings, or digital presence is currently unavailable. No official website, detailed company profile, or API documentation could be located through standard web searches and rendering attempts. Consequently, the company’s domain, branding, and service descriptions remain undocumented at this time.'
+
 url: https://raw.githubusercontent.com/api-evangelist/avatarin/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/avatarin-hosts.yml
+- type: Vendors
+  url: vendors/avatarin-vendors.yml
+- type: DomainSecurity
+  url: security/avatarin-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/avatarin
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Owner portal at https://owner.avatarin.com returns a JavaScript shell, preventing machine‑readable API discovery.
+  evidence:
+    - url: https://owner.avatarin.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
